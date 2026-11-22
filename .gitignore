@@ -1,0 +1,15 @@
+# Môi trường ảo & cache
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Dữ liệu lớn & file nhị phân (chỉ giữ train_test_split_ids.csv và metrics JSON)
+data/raw/*.csv
+data/processed/*.joblib
+results/predictions/*.csv
+
+# Hệ điều hành & IDE
+.DS_Store
+Thumbs.db
+.vscode/

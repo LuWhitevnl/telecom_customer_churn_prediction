@@ -1,0 +1,41 @@
+{
+  "model": "Decision Tree",
+  "baseline_cv": {
+    "f1": 0.3572,
+    "recall": 0.3581,
+    "precision": 0.3564,
+    "roc_auc": 0.5481,
+    "ap": 0.3126
+  },
+  "weighted_cv": {
+    "f1": 0.3623,
+    "recall": 0.3672,
+    "precision": 0.3577,
+    "roc_auc": 0.5502,
+    "ap": 0.3138
+  },
+  "smote_cv": {
+    "f1": 0.3565,
+    "recall": 0.3704,
+    "precision": 0.3437,
+    "roc_auc": 0.542,
+    "ap": 0.3088
+  },
+  "tuned_cv": {
+    "f1": 0.4843,
+    "recall": 0.8017,
+    "precision": 0.3469,
+    "roc_auc": 0.6237,
+    "ap": 0.3686
+  },
+  "tuned_cv_f1_std": 0.004,
+  "tuned_best_cv_f1": 0.4843,
+  "tuned_best_params": {
+    "min_samples_leaf": 5,
+    "max_depth": 12,
+    "class_weight": "balanced",
+    "ccp_alpha": 0.001
+  },
+  "best_oof_threshold": 0.4,
+  "best_oof_f1_at_threshold": 0.4845
+}

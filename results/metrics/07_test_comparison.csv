@@ -1,0 +1,5 @@
+key,model,fit_predict_sec,threshold,accuracy,precision,recall,f1,roc_auc,pr_auc
+05_random_forest,Random Forest,4.86,0.45,0.4797,0.3393,0.8504,0.4851,0.648,0.4146
+03_logistic_regression,Logistic Regression,2.8,0.45,0.4888,0.3334,0.7743,0.4661,0.6132,0.3725
+06_svm,Support Vector Machine (LinearSVC),4.6,0.25,0.4853,0.3324,0.7797,0.4661,0.6118,0.3701
+04_decision_tree,Decision Tree,8.32,0.4,0.4822,0.3366,0.8209,0.4774,0.6164,0.3666
