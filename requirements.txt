@@ -1,9 +1,6 @@
-numpy
+streamlit>=1.40.0
+scikit-learn==1.9.1
+joblib==1.6.0
 pandas
-scikit-learn
-imbalanced-learn
+numpy
 matplotlib
-seaborn
-joblib
-ipykernel
-jupyter

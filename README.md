@@ -46,7 +46,8 @@ telecom-churn-ml/
 │   ├── metrics/                        # Các file JSON kết quả CV (03–06) và bảng Test (07)
 │   ├── figures/                        # Biểu đồ EDA & kết quả thực nghiệm
 │   └── predictions/                    # File dự đoán 20.000 khách hàng (telecom_predictions.csv - gitignore)
-├── requirements.txt                    # Danh sách thư viện phụ thuộc
+├── app.py                              # Giao diện Web App Streamlit (dự đoán batch CSV & cá nhân)
+├── requirements.txt                    # Danh sách thư viện phụ thuộc (phục vụ Streamlit Cloud)
 └── README.md
 ```
 
@@ -128,5 +129,25 @@ Sau khi kiểm chứng chéo 5-fold (5-fold Stratified CV) trên tập Huấn lu
 > **Nhận xét:**
 > - **Random Forest** đạt hiệu quả tổng thể cao nhất với **ROC-AUC = 0.6480**, **PR-AUC = 0.4146** và **Recall = 85.04%** tại ngưỡng $0.45$.
 > - Trong bài toán giữ chân khách hàng (Retention), chỉ số **Recall** đóng vai trò tối quan trọng để bắt trúng tối đa khách hàng có nguy cơ rời mạng viễn thông. Do đó, pipeline Random Forest được chọn làm giải pháp chính thức và đóng gói tại `models/churn_pipeline.joblib`.
+
+---
+
+## 7. Khởi chạy Ứng dụng Web (Streamlit App)
+
+Dự án cung cấp giao diện Web trực quan hỗ trợ dự đoán hàng loạt (Upload file CSV) hoặc dự đoán cho từng khách hàng đơn lẻ:
+
+```bash
+streamlit run app.py
+```
+
+### Hướng dẫn Deploy lên Streamlit Community Cloud:
+1. Đăng nhập vào [Streamlit Community Cloud](https://share.streamlit.io/).
+2. Chọn **Create app** $\rightarrow$ **Deploy a public app from GitHub**.
+3. Điền thông tin cấu hình:
+   * **Repository:** `LuWhitevnl/customer_segmentation_project`
+   * **Branch:** `main`
+   * **Main file path:** `app.py`
+4. Bấm **Deploy!**
+*(Toàn bộ thư viện phụ thuộc đã khai báo tại `requirements.txt`, mô hình và metadata đã được đồng bộ sẵn trong thư mục `models/`).*
 
 
